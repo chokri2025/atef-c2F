@@ -58,8 +58,8 @@ export default function Header() {
     <header className={`header ${isScrolled || isMobileMenuOpen ? 'scrolled' : ''}`}>
       <div className="container nav-container">
         <a href={isHomePage ? '#accueil' : '/'} className="logo" onClick={closeMobileMenu}>
-          <span className="logo-c2f" style={{ color: '#0077D9', fontWeight: 'bold', fontSize: '1.5rem', fontFamily: 'var(--font-heading)' }}>C2F</span>
-          <span className="logo-install" style={{ color: '#F8B400', fontWeight: 'bold', fontSize: '1.5rem', fontFamily: 'var(--font-heading)' }}> INSTALL</span>
+          <span className="logo-c2f">C2F</span>
+          <span className="logo-install"> INSTALL</span>
         </a>
 
         <nav className="nav-links">

@@ -21,8 +21,10 @@ export default function Process() {
             <div key={idx} className="process-step">
               <div className="process-step-number">{idx + 1}</div>
               <div className="process-step-icon">{step.icon}</div>
-              <h3 className="process-step-title">{step.title}</h3>
-              <p className="process-step-desc">{step.desc}</p>
+              <div className="process-step-content">
+                <h3 className="process-step-title">{step.title}</h3>
+                <p className="process-step-desc">{step.desc}</p>
+              </div>
             </div>
           ))}
         </div>

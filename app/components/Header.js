@@ -58,8 +58,8 @@ export default function Header() {
     <header className={`header ${isScrolled || isMobileMenuOpen ? 'scrolled' : ''}`}>
       <div className="container nav-container">
         <a href={isHomePage ? '#accueil' : '/'} className="logo" onClick={closeMobileMenu}>
-          <span className="logo-c2f">C2F</span>
-          <span className="logo-install"> INSTALL</span>
+          <span className="logo-c2f">C2F-</span>
+          <span className="logo-install">INSTALL</span>
         </a>
 
         <nav className="nav-links">

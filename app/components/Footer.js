@@ -7,8 +7,8 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-col">
             <div className="footer-logo">
-              <span style={{ color: '#0077D9', fontWeight: 'bold', fontSize: '24px' }}>C2F</span>
-              <span style={{ color: '#F8B400', fontWeight: 'bold', fontSize: '24px' }}> INSTALL</span>
+              <span style={{ color: '#0077D9', fontWeight: 'bold', fontSize: '24px' }}>C2F-</span>
+              <span style={{ color: '#F8B400', fontWeight: 'bold', fontSize: '24px' }}>INSTALL</span>
             </div>
             <p className="footer-desc">
               Votre partenaire de confiance pour toutes vos installations électriques et systèmes de sécurité à Montluçon et ses environs.

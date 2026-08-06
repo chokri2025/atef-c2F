@@ -1,7 +1,11 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
+  
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -9,9 +13,29 @@ export default function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
+    
+    // Always force scrolled style on legal subpages since they have a white background
+    if (!isHomePage) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(window.scrollY > 50);
+      window.addEventListener('scroll', handleScroll);
+    }
+    
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isHomePage]);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
@@ -25,23 +49,28 @@ export default function Header() {
     { href: '#contact', label: 'Contact' },
   ];
 
+  const getHref = (href) => {
+    if (isHomePage) return href;
+    return '/' + href;
+  };
+
   return (
-    <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
+    <header className={`header ${isScrolled || isMobileMenuOpen ? 'scrolled' : ''}`}>
       <div className="container nav-container">
-        <a href="/" className="logo">
+        <a href={isHomePage ? '#accueil' : '/'} className="logo" onClick={closeMobileMenu}>
           <span className="logo-c2f" style={{ color: '#0077D9', fontWeight: 'bold', fontSize: '1.5rem', fontFamily: 'var(--font-heading)' }}>C2F</span>
           <span className="logo-install" style={{ color: '#F8B400', fontWeight: 'bold', fontSize: '1.5rem', fontFamily: 'var(--font-heading)' }}> INSTALL</span>
         </a>
 
-        <nav className={`nav-links ${isMobileMenuOpen ? 'mobile-menu active' : ''}`}>
+        <nav className="nav-links">
           {navLinks.map((link) => (
-            <a key={link.href} href={link.href} className="nav-link" onClick={closeMobileMenu}>{link.label}</a>
+            <a key={link.href} href={getHref(link.href)} className="nav-link">{link.label}</a>
           ))}
-          <a href="#contact" className="btn-primary nav-cta" onClick={closeMobileMenu}>Devis gratuit</a>
+          <a href={getHref('#contact')} className="btn-primary nav-cta">Devis gratuit</a>
         </nav>
 
         <button
-          className="mobile-toggle"
+          className={`mobile-toggle ${isMobileMenuOpen ? 'menu-open' : ''}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Menu"
           aria-expanded={isMobileMenuOpen}
@@ -63,9 +92,9 @@ export default function Header() {
       {/* Mobile Menu */}
       <div className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}>
         {navLinks.map((link) => (
-          <a key={link.href} href={link.href} className="nav-link" onClick={closeMobileMenu}>{link.label}</a>
+          <a key={link.href} href={getHref(link.href)} className="nav-link" onClick={closeMobileMenu}>{link.label}</a>
         ))}
-        <a href="#contact" className="btn-primary" onClick={closeMobileMenu}>Devis gratuit</a>
+        <a href={getHref('#contact')} className="btn-primary" onClick={closeMobileMenu}>Devis gratuit</a>
       </div>
     </header>
   );

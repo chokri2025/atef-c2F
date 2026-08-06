@@ -1,17 +1,15 @@
-import Link from 'next/link';
-import Image from 'next/image';
-
 export default function Hero() {
   return (
     <section id="accueil" className="hero">
-      <div className="hero-bg">
-        <Image
-          src="/images/hero_background.jpg"
-          alt="C2F INSTALL installations électriques"
-          fill
-          priority
-          sizes="100vw"
-          style={{ objectFit: 'cover' }}
+      <div className="hero-bg" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', overflow: 'hidden' }}>
+        <video
+          src="/hero-video.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="/images/hero_background.jpg"
+          style={{ objectFit: 'cover', width: '100%', height: '100%' }}
         />
         <div className="hero-overlay"></div>
       </div>

@@ -80,6 +80,7 @@ export default function Contact() {
                   <option value="Vidéosurveillance">Vidéosurveillance</option>
                   <option value="Contrôle d'accès">Contrôle d'accès</option>
                   <option value="Sécurité incendie">Sécurité incendie</option>
+                  <option value="Borne de recharge IRVE">Borne de recharge IRVE (Voiture électrique)</option>
                   <option value="Autre">Autre</option>
                 </select>
               </div>

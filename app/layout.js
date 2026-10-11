@@ -1,5 +1,6 @@
 import './globals.css'
 import { Inter, Outfit } from 'next/font/google'
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'], variable: '--font-inter' })
 const outfit = Outfit({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800'], variable: '--font-outfit' })
@@ -64,7 +65,22 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body className={`${inter.variable} ${outfit.variable}`}>{children}</body>
+      <body className={`${inter.variable} ${outfit.variable}`}>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-1GXT9N13KV"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-1GXT9N13KV');
+          `}
+        </Script>
+        {children}
+      </body>
     </html>
   )
 }

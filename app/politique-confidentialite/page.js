@@ -4,7 +4,10 @@ import Footer from '../components/Footer';
 
 export const metadata = {
   title: 'Politique de Confidentialité | C2F INSTALL',
-  description: 'Politique de confidentialité et protection des données personnelles de C2F INSTALL.',
+  description: 'Politique de confidentialité et protection des données personnelles de C2F INSTALL, électricien à Montluçon.',
+  alternates: {
+    canonical: '/politique-confidentialite',
+  },
 };
 
 export default function PolitiqueConfidentialite() {
@@ -51,7 +54,7 @@ export default function PolitiqueConfidentialite() {
               <li>Droit à la limitation du traitement</li>
               <li>Droit à la portabilité de vos données</li>
             </ul>
-            <p className="mt-4">Pour exercer ces droits, vous pouvez nous contacter à l'adresse suivante : <strong>c2f.install@gmail.com</strong>.</p>
+            <p className="mt-4">Pour exercer ces droits, vous pouvez nous contacter à l'adresse suivante : <strong>contact@c2f-install.fr</strong>.</p>
           </section>
 
           <section className="legal-section">
@@ -62,7 +65,7 @@ export default function PolitiqueConfidentialite() {
           <section className="legal-section">
             <h2 className="legal-heading text-2xl font-semibold mb-4 text-gray-900">6. DPO et contact</h2>
             <p>Pour toute question concernant la politique de confidentialité, vous pouvez contacter notre Délégué à la Protection des Données (DPO) :</p>
-            <p>Email : <strong>c2f.install@gmail.com</strong></p>
+            <p>Email : <strong>contact@c2f-install.fr</strong></p>
           </section>
 
           <div className="mt-12 text-center">

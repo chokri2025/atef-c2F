@@ -8,6 +8,7 @@ export default function Hero() {
           loop
           muted
           playsInline
+          preload="metadata"
           poster="/images/hero_background.jpg"
           style={{ objectFit: 'cover', width: '100%', height: '100%' }}
         />

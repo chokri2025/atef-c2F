@@ -4,7 +4,10 @@ import Footer from '../components/Footer';
 
 export const metadata = {
   title: 'Mentions Légales | C2F INSTALL',
-  description: 'Mentions légales du site C2F INSTALL, électricien à Montluçon.',
+  description: 'Mentions légales du site C2F INSTALL, électricien à Montluçon (03100).',
+  alternates: {
+    canonical: '/mentions-legales',
+  },
 };
 
 export default function MentionsLegales() {
@@ -33,7 +36,7 @@ export default function MentionsLegales() {
           <section className="legal-section">
             <h2 className="legal-heading text-2xl font-semibold mb-4 text-gray-900">3. Contact</h2>
             <p>Téléphone : +33 7 81 22 17 99</p>
-            <p>Email : c2f.install@gmail.com</p>
+            <p>Email : contact@c2f-install.fr</p>
           </section>
 
           <section className="legal-section">

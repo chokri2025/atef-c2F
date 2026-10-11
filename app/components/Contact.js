@@ -113,7 +113,7 @@ export default function Contact() {
               </div>
               <div>
                 <h3>Email</h3>
-                <a href="mailto:c2f.install@gmail.com">c2f.install@gmail.com</a>
+                <a href="mailto:contact@c2f-install.fr">contact@c2f-install.fr</a>
               </div>
             </div>
             

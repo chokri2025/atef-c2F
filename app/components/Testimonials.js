@@ -51,6 +51,8 @@ export default function Testimonials() {
     <section id="avis" className="testimonials-section">
       <div className="container">
         <div className="section-header">
+          <span className="section-badge">TÉMOIGNAGES CLIENTS</span>
+          <h2 className="section-title">Avis de nos clients à Montluçon</h2>
           <div className="google-rating">
             <div className="google-logo">Google</div>
             <div className="google-rating-score">5.0</div>
@@ -77,7 +79,7 @@ export default function Testimonials() {
                   ))}
                 </div>
                 <p className="testimonial-text">"{testi.text}"</p>
-                <h4 className="testimonial-author">- {testi.author}</h4>
+                <p className="testimonial-author">- {testi.author}</p>
               </div>
             ))}
           </div>

@@ -44,14 +44,14 @@ export default function InterventionZone() {
           
           <div className="zone-map">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22066.53!2d2.5925!3d46.3407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f0a6a5b5a5a5a5%3A0x3f1b3c3c3c3c3c3c!2sMontlu%C3%A7on!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr" 
+              src="https://maps.google.com/maps?q=33+Avenue+de+la+R%C3%A9publique,+03100+Montlu%C3%A7on&t=&z=12&ie=UTF8&iwloc=&output=embed" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
               allowFullScreen="" 
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"
-              title="Carte d'intervention C2F INSTALL à Montluçon"
+              title="Carte d'intervention C2F INSTALL à Montluçon et dans l'Allier"
             ></iframe>
           </div>
         </div>

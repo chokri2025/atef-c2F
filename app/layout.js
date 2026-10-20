@@ -7,15 +7,15 @@ const outfit = Outfit({ subsets: ['latin'], weight: ['400', '500', '600', '700',
 
 export const metadata = {
   metadataBase: new URL('https://c2f-install.fr'),
-  title: 'C2F INSTALL | Électricien à Montluçon - Installation Électrique, Bornes IRVE, Sécurité',
-  description: 'C2F INSTALL, votre électricien professionnel à Montluçon (03100). Installation électrique, bornes de recharge IRVE, rénovation, alarmes, vidéosurveillance, contrôle d\'accès, réseau informatique, fibre optique. Devis gratuit.',
+  title: 'Électricien à Montluçon (03) | C2F INSTALL - IRVE & Sécurité',
+  description: 'C2F INSTALL, votre électricien à Montluçon (03100) : électricité générale, bornes IRVE, alarmes, vidéosurveillance et fibre. Devis gratuit : 07 81 22 17 99.',
   keywords: 'électricien Montluçon, borne de recharge Montluçon, installateur IRVE Montluçon, électricité générale Montluçon, installation électrique Montluçon, alarme Montluçon, vidéosurveillance Montluçon, courant faible Montluçon, réseau informatique Montluçon, fibre optique Montluçon, contrôle d\'accès Montluçon, électricien Allier, électricien 03100',
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'C2F INSTALL | Électricien à Montluçon - Installation Électrique, Bornes IRVE, Sécurité',
-    description: 'C2F INSTALL, votre électricien professionnel à Montluçon (03100). Installation électrique, bornes de recharge IRVE, rénovation, alarmes, vidéosurveillance, réseau informatique. Devis gratuit.',
+    title: 'Électricien à Montluçon (03) | C2F INSTALL - IRVE & Sécurité',
+    description: 'C2F INSTALL, votre électricien à Montluçon (03100) : électricité générale, bornes IRVE, alarmes, vidéosurveillance et fibre. Devis gratuit : 07 81 22 17 99.',
     url: 'https://c2f-install.fr',
     siteName: 'C2F INSTALL',
     locale: 'fr_FR',
@@ -31,8 +31,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'C2F INSTALL | Électricien à Montluçon - Installation Électrique, Bornes IRVE, Sécurité',
-    description: 'Votre électricien de référence à Montluçon (03100). Électricité générale, bornes de recharge IRVE, alarmes et vidéosurveillance.',
+    title: 'Électricien à Montluçon (03) | C2F INSTALL - IRVE & Sécurité',
+    description: 'Votre électricien à Montluçon (03100) : électricité générale, bornes de recharge IRVE, alarmes et vidéosurveillance. Devis gratuit.',
     images: ['/images/hero_background.jpg'],
   },
   robots: {

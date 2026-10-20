@@ -56,10 +56,20 @@ export const metadata = {
   verification: {
     google: 'googlea4e9dc21fbf9ebc0',
   },
+  authors: [{ name: 'C2F INSTALL', url: 'https://c2f-install.fr' }],
+  creator: 'C2F INSTALL',
+  publisher: 'C2F INSTALL',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
 }
 
 export const viewport = {
-  themeColor: '#0077D9'
+  themeColor: '#0077D9',
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({ children }) {

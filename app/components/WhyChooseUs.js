@@ -43,7 +43,7 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="why-section">
+    <section id="engagements" className="why-section">
       <div className="container">
         <div className="section-header">
           <span className="section-badge">NOS ENGAGEMENTS</span>

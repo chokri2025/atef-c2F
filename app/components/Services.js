@@ -67,7 +67,7 @@ export default function Services() {
           {services.map((service, idx) => (
             <div key={idx} className="service-card animate-on-scroll">
               <div className="service-card-image" style={{ position: 'relative' }}>
-                <Image src={service.image} alt={service.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" style={{ objectFit: 'cover' }} />
+                <Image src={service.image} alt={`${service.title} - C2F INSTALL Montluçon`} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" style={{ objectFit: 'cover' }} />
               </div>
               <div className="service-card-content">
                 <div className="service-card-icon">{service.icon}</div>
@@ -81,7 +81,7 @@ export default function Services() {
                     </li>
                   ))}
                 </ul>
-                <a href="#contact" className="service-card-btn">En savoir plus</a>
+                <a href="#contact" className="service-card-btn" aria-label={`Demander un devis pour ${service.title}`}>En savoir plus</a>
               </div>
             </div>
           ))}

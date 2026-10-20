@@ -14,6 +14,7 @@ export default function Gallery() {
     { id: 4, title: 'Système d\'Alarme', category: 'Alarmes', image: '/images/alarme_intrusion.jpg' },
     { id: 5, title: 'Contrôle d\'accès', category: 'Réseaux', image: '/images/controle_acces.jpg' },
     { id: 6, title: 'Sécurité Incendie', category: 'Alarmes', image: '/images/securite_incendie.jpg' },
+    { id: 7, title: 'Borne de Recharge IRVE', category: 'Électricité', image: '/images/borne_recharge.jpg' },
   ];
 
   const filteredItems = activeFilter === 'Tous' 
@@ -43,7 +44,7 @@ export default function Gallery() {
         <div className="gallery-grid">
           {filteredItems.map(item => (
             <div key={item.id} className="gallery-item animate-on-scroll" style={{ position: 'relative' }}>
-              <Image src={item.image} alt={item.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" style={{ objectFit: 'cover' }} />
+              <Image src={item.image} alt={`${item.title} - Réalisation C2F INSTALL à Montluçon`} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" style={{ objectFit: 'cover' }} />
               <div className="gallery-item-overlay">
                 <h3 className="gallery-item-title">{item.title}</h3>
               </div>

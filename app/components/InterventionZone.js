@@ -1,6 +1,6 @@
 export default function InterventionZone() {
   return (
-    <section className="zone-section">
+    <section id="zone-intervention" className="zone-section">
       <div className="container">
         <div className="section-header">
           <span className="section-badge">ZONE D'INTERVENTION</span>

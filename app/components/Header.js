@@ -57,12 +57,12 @@ export default function Header() {
   return (
     <header className={`header ${isScrolled || isMobileMenuOpen ? 'scrolled' : ''}`}>
       <div className="container nav-container">
-        <a href={isHomePage ? '#accueil' : '/'} className="logo" onClick={closeMobileMenu}>
+        <a href={isHomePage ? '#accueil' : '/'} className="logo" onClick={closeMobileMenu} aria-label="C2F INSTALL - Retour à l'accueil">
           <span className="logo-c2f">C2F-</span>
           <span className="logo-install">INSTALL</span>
         </a>
 
-        <nav className="nav-links">
+        <nav className="nav-links" aria-label="Menu principal">
           {navLinks.map((link) => (
             <a key={link.href} href={getHref(link.href)} className="nav-link">{link.label}</a>
           ))}
@@ -72,7 +72,7 @@ export default function Header() {
         <button
           className={`mobile-toggle ${isMobileMenuOpen ? 'menu-open' : ''}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Menu"
+          aria-label="Ouvrir le menu mobile"
           aria-expanded={isMobileMenuOpen}
         >
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -90,12 +90,12 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}>
+      <nav className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`} aria-label="Menu mobile">
         {navLinks.map((link) => (
           <a key={link.href} href={getHref(link.href)} className="nav-link" onClick={closeMobileMenu}>{link.label}</a>
         ))}
         <a href={getHref('#contact')} className="btn-primary" onClick={closeMobileMenu}>Devis gratuit</a>
-      </div>
+      </nav>
     </header>
   );
 }

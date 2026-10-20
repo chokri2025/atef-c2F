@@ -85,18 +85,18 @@ export default function Testimonials() {
           </div>
           
           <div className="carousel-controls">
-            <button className="carousel-arrow" onClick={prevSlide}>&lt;</button>
+            <button className="carousel-arrow" onClick={prevSlide} aria-label="Témoignage précédent">&lt;</button>
             <div className="carousel-dots">
               {testimonials.map((_, idx) => (
                 <button 
                   key={idx} 
                   className={`carousel-dot ${idx === currentSlide ? 'active' : ''}`}
                   onClick={() => setCurrentSlide(idx)}
-                  aria-label={`Aller au slide ${idx + 1}`}
+                  aria-label={`Aller au témoignage ${idx + 1}`}
                 ></button>
               ))}
             </div>
-            <button className="carousel-arrow" onClick={nextSlide}>&gt;</button>
+            <button className="carousel-arrow" onClick={nextSlide} aria-label="Témoignage suivant">&gt;</button>
           </div>
         </div>
       </div>

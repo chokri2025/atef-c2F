@@ -30,6 +30,7 @@ export default function Footer() {
             <h3 className="footer-heading">Services</h3>
             <ul className="footer-links">
               <li><a href="#services">Électricité Générale</a></li>
+              <li><a href="#services">Bornes de Recharge (IRVE)</a></li>
               <li><a href="#services">Réseaux Informatiques</a></li>
               <li><a href="#services">Alarmes Intrusion</a></li>
               <li><a href="#services">Vidéosurveillance</a></li>

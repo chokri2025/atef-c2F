@@ -1,6 +1,21 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 export default function Hero() {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    // Only load the 2.6MB video on desktop screens (>= 1024px) to preserve mobile LCP & data
+    const mediaQuery = window.matchMedia('(min-width: 1024px)');
+    setIsDesktop(mediaQuery.matches);
+
+    const handler = (e) => setIsDesktop(e.matches);
+    mediaQuery.addEventListener('change', handler);
+    return () => mediaQuery.removeEventListener('change', handler);
+  }, []);
+
   return (
     <section id="accueil" className="hero">
       <div className="hero-bg" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', overflow: 'hidden' }}>
@@ -11,19 +26,21 @@ export default function Hero() {
           priority
           sizes="100vw"
           style={{ objectFit: 'cover' }}
-          quality={80}
+          quality={75}
         />
-        <video
-          className="hero-video-desktop"
-          src="/hero-video.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="none"
-          aria-hidden="true"
-          style={{ objectFit: 'cover', width: '100%', height: '100%', position: 'absolute', top: 0, left: 0 }}
-        />
+        {isDesktop && (
+          <video
+            className="hero-video-desktop"
+            src="/hero-video.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            aria-hidden="true"
+            style={{ objectFit: 'cover', width: '100%', height: '100%', position: 'absolute', top: 0, left: 0 }}
+          />
+        )}
         <div className="hero-overlay"></div>
       </div>
       

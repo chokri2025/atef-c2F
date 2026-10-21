@@ -1,6 +1,6 @@
 import './globals.css'
 import { Inter, Outfit } from 'next/font/google'
-import Script from 'next/script'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit', display: 'swap' })
@@ -76,20 +76,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <body className={`${inter.variable} ${outfit.variable}`}>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-1GXT9N13KV"
-          strategy="lazyOnload"
-        />
-        <Script id="google-analytics" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-1GXT9N13KV');
-          `}
-        </Script>
         {children}
+        <GoogleAnalytics gaId="G-1GXT9N13KV" />
       </body>
     </html>
   )

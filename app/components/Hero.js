@@ -1,16 +1,28 @@
+import Image from 'next/image';
+
 export default function Hero() {
   return (
     <section id="accueil" className="hero">
       <div className="hero-bg" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', overflow: 'hidden' }}>
+        <Image
+          src="/images/hero_background.jpg"
+          alt="C2F INSTALL - Installations électriques et sécurité à Montluçon"
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: 'cover' }}
+          quality={80}
+        />
         <video
+          className="hero-video-desktop"
           src="/hero-video.mp4"
           autoPlay
           loop
           muted
           playsInline
-          preload="metadata"
-          poster="/images/hero_background.jpg"
-          style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+          preload="none"
+          aria-hidden="true"
+          style={{ objectFit: 'cover', width: '100%', height: '100%', position: 'absolute', top: 0, left: 0 }}
         />
         <div className="hero-overlay"></div>
       </div>

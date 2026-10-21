@@ -46,26 +46,26 @@ export default function Contact() {
               </div>
             )}
             <form className="contact-form" onSubmit={handleSubmit}>
-              <input type="text" name="honeypot" className="honeypot" value={formData.honeypot} onChange={handleChange} tabIndex="-1" autoComplete="off" style={{ display: 'none' }} />
+              <input type="text" name="honeypot" className="honeypot" value={formData.honeypot} onChange={handleChange} tabIndex="-1" autoComplete="off" aria-hidden="true" aria-label="Ne pas remplir ce champ" style={{ display: 'none' }} />
               
               <div className="form-group">
                 <label htmlFor="name">Nom complet</label>
-                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
+                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} autoComplete="name" required />
               </div>
               
               <div className="form-group">
                 <label htmlFor="phone">Téléphone</label>
-                <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} required />
+                <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} autoComplete="tel" required />
               </div>
               
               <div className="form-group">
                 <label htmlFor="email">Email</label>
-                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
+                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} autoComplete="email" required />
               </div>
               
               <div className="form-group">
                 <label htmlFor="address">Adresse</label>
-                <input type="text" id="address" name="address" value={formData.address} onChange={handleChange} />
+                <input type="text" id="address" name="address" value={formData.address} onChange={handleChange} autoComplete="street-address" />
               </div>
               
               <div className="form-group">

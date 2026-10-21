@@ -301,6 +301,16 @@ button {
   filter: brightness(1.25);
 }
 
+.hero-video-desktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .hero-video-desktop {
+    display: block;
+  }
+}
+
 .hero-overlay {
   position: absolute;
   top: 0;

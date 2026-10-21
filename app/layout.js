@@ -1,6 +1,6 @@
 import './globals.css'
 import { Inter, Outfit } from 'next/font/google'
-import { GoogleAnalytics } from '@next/third-parties/google'
+import GoogleAnalytics from './components/GoogleAnalytics'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit', display: 'swap' })
